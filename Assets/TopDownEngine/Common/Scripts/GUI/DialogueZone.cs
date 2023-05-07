@@ -133,7 +133,7 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		public override void TriggerButtonAction()
 		{
-			Debug.LogError("FROM HERE");
+			// Debug.LogError("FROM HERE");
 			if (!CheckNumberOfUses())
 			{
 				return;
@@ -334,7 +334,7 @@ namespace MoreMountains.TopDownEngine
 			// we check that the dialogue box still exists
 			if (_dialogueBox.DialogueText != null)
 			{
-				Debug.LogError("ENTry TEXT SET FROM HERE 2.5");
+				// Debug.LogError("ENTry TEXT SET FROM HERE 2.5");
 				// we set the box's text with the current dialogue
 				_dialogueBox.DialogueText.text = Dialogue[_currentIndex].DialogueLine;
 				// then every dialogue box starts with it fading in
