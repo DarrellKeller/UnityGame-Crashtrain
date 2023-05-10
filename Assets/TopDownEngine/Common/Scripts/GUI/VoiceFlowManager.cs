@@ -21,7 +21,6 @@ public class VoiceFlowManager : MonoBehaviour
     }
 
     string VersionId = "6325656c64484143a984ae27";
-    string Bearer = "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";
     string ApiKey = "VF.DM.6328c179b6503d000741dd2f.iMz8Edbuxati1JMS";
     string user = "user_123";
 
@@ -45,38 +44,9 @@ public class VoiceFlowManager : MonoBehaviour
         }
     }
 
-    // public GetResponse(string userData){
-    //     StartCoroutine(userData);
-    // }
 
     public IEnumerator GetResponse(string payload) {
-       // JSONObject o = new JSONObject();
-       // JSONObject o1 = new JSONObject();
-       // JSONObject o2 = new JSONObject();
-       // o1.Add("type","text");
-       // o2.Add("payload",payload);
-       // o.Add("action",JsonUtility.ToJson(o1.ToString())+ JsonUtility.ToJson(o2.ToString()));
-
-       // rawData rawData = new rawData() { type = "text",payload = payload };
-       // ActionBotChat action = new ActionBotChat() { action = rawData };
-       // string _data = Newtonsoft.Json.JsonConvert.SerializeObject(action).ToString();
-       // Debug.LogError(Newtonsoft.Json.JsonConvert.SerializeObject(action));
-       // byte[] byteArray = Encoding.UTF8.GetBytes(_data);
-       // UnityWebRequest req = UnityWebRequest.Post("https://general-runtime.voiceflow.com/state/user/" + user + "/interact",_data);
-       // req.SetRequestHeader("Authorization",ApiKey);
-       // req.method = "POST";
-       // req.SetRequestHeader("Content-Type","application/json");
-       // req.SetRequestHeader("versionID",VersionId);
-       // yield return req.SendWebRequest();
-       // Debug.Log(req.downloadHandler.text);
-       // JSONNode data = (JSONNode)JSON.Parse(req.downloadHandler.text);
-       // Debug.Log(req.downloadHandler.text);
-       //// Debug.Log(data[0]);
-       // //Debug.Log(data[0]["payload"]["message"]);
-       // VoiceFlowManager.resp = data[0]["payload"]["message"];
-       // if(resp == null|| resp == "") { resp = "..."; }
-       // yield return null;
-        //
+        Debug.Log("Sending request to Voiceflow API with payload: " + payload);
 
         rawData raw = new rawData() { type = "text",payload = payload };
             ActionBotChat b = new ActionBotChat { action=raw };
@@ -98,13 +68,13 @@ public class VoiceFlowManager : MonoBehaviour
                 www.SetRequestHeader("Content-Type","application/json");
             www.SetRequestHeader("Authorization",ApiKey);
             www.method = "POST";
-            //www.SetRequestHeader("Content-Type","application/json");
             www.SetRequestHeader("versionID",VersionId);
             yield return www.SendWebRequest();
             List<ChatBotResponse> chatBotResponses= JsonConvert.DeserializeObject<List<ChatBotResponse>>(www.downloadHandler.text);
-            //Debug.LogError("REPLY : "+ www.downloadHandler.text);
 
-            resp = chatBotResponses[1].payload.message;
+
+            resp = chatBotResponses.Find(r => r.type == "text")?.payload.message ?? "";
+            Debug.Log("Received response from Voiceflow API: " + resp);
             }
 
        

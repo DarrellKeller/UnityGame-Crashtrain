@@ -49,7 +49,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -77342,15 +77342,15 @@ TextureImporter:
       Room_Builder_16x16_1177: 1089217537
       Room_Builder_16x16_825: -1464734193
       Room_Builder_16x16_2463: 1900760796
-      Room_Builder_16x16_80: 2098405191
-      Room_Builder_16x16_826: 1759486749
+      Room_Builder_16x16_1119: 12818366
+      Room_Builder_16x16_1543: -399450701
       Room_Builder_16x16_2064: -729471102
       Room_Builder_16x16_3187: -1378075935
       Room_Builder_16x16_515: 1312859324
       Room_Builder_16x16_1109: 1494336326
-      Room_Builder_16x16_1119: 12818366
-      Room_Builder_16x16_1543: -399450701
+      Room_Builder_16x16_80: 2098405191
       Room_Builder_16x16_669: 48792520
+      Room_Builder_16x16_826: 1759486749
       Room_Builder_16x16_315: 1594040407
       Room_Builder_16x16_1785: 744137414
       Room_Builder_16x16_2046: 865504964
@@ -77553,13 +77553,13 @@ TextureImporter:
       Room_Builder_16x16_2377: 864579370
       Room_Builder_16x16_3145: -1312054264
       Room_Builder_16x16_3409: -427103896
-      Room_Builder_16x16_2149: -194554183
+      Room_Builder_16x16_2205: 1099104690
       Room_Builder_16x16_167: -799552795
       Room_Builder_16x16_3252: 644169217
       Room_Builder_16x16_2393: 1154084361
       Room_Builder_16x16_2450: 1837638601
       Room_Builder_16x16_104: 1732477609
-      Room_Builder_16x16_2205: 1099104690
+      Room_Builder_16x16_2149: -194554183
       Room_Builder_16x16_2264: -2109989161
       Room_Builder_16x16_2885: -1794557621
       Room_Builder_16x16_3625: 1692529719
